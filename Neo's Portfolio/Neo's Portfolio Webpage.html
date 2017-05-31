@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-CN">                                 
+    <head>
+		<meta charset="utf-8">
+		<title>Neo's Portfolio Webpage</title>
+		<link rel="stylesheet" href="Neo's Portfolio Webpage.css">
+        <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+	</head>
+	<body>
+		<!-- NAVIGATION -->
+		<nav class="navbar">
+			<div class="container">
+				<a class="nav-header" href="#">Neo's Portfolio</a>
+				<ul>
+					<li><a class="scroll" href="#home">HOME</a></li>
+					<li><a class="scroll" href="#portfolio">PORTFOLIO</a></li>
+					<li><a class="scroll" href="#contact">CONTACT</a></li>
+				</ul>
+			</div>
+		</nav>
+		
+		<!-- HOME -->
+  		<div id="home" class="content">
+  		    <div class="container">
+  		        <h1>WELCOME TO MY PORTFOLIO WEBPAGE</h1>
+  		    </div>
+  		</div>
+
+  		<!-- PORTFOLIO -->
+  		<div id="portfolio" class="content">
+  			<div class="container">
+  				<h1>PORTFOLIO</h1>
+                <div class="row">
+                    <div class="col-sm-6 col-md-4 col">
+	          	        <div class="thumbnail">
+                            <img src="img/1.jpg" alt="Project">
+                            <div class="info">
+                                <h4>Project #1</h4>
+                	            <p>This is the introduction of project.</p>
+                            </div>
+            	        </div>	
+	                </div>
+	                <div class="col-sm-6 col-md-4 col">
+                        <div class="thumbnail">
+                            <img src="img/2.jpg" alt="Project">
+                            <div class="info">
+                                <h4>Project #2</h4>
+                                <p>This is the introduction of project.</p>
+                            </div>
+                        </div>  
+                    </div>
+	                <div class="col-sm-6 col-md-4 col">
+                        <div class="thumbnail">
+                            <img src="img/3.jpg" alt="Project">
+                            <div class="info">
+                                <h4>Project #3</h4>
+                                <p>This is the introduction of project.</p>
+                            </div>
+                        </div>  
+                    </div>
+				</div> 
+				<div class="row"> 
+					<div class="col-sm-6 col-md-4 col">
+                        <div class="thumbnail">
+                            <img src="img/4.jpg" alt="Project">
+                            <div class="info">
+                                <h4>Project #4</h4>
+                                <p>This is the introduction of project.</p>
+                            </div>
+                        </div>  
+                    </div>
+					<div class="col-sm-6 col-md-4 col">
+                        <div class="thumbnail">
+                            <img src="img/5.jpg" alt="Project">
+                            <div class="info">
+                                <h4>Project #5</h4>
+                                <p>This is the introduction of project.</p>
+                            </div>
+                        </div>  
+                    </div>
+					<div class="col-sm-6 col-md-4 col">
+                        <div class="thumbnail">
+                            <img src="img/6.jpg" alt="Project">
+                            <div class="info">
+                                <h4>Project #6</h4>
+                                <p>This is the introduction of project.</p>
+                            </div>
+                        </div>  
+                    </div>
+				</div> 
+  			</div>
+  		</div>
+
+    <!-- CONTACT -->
+    <div id="contact" class="content">
+        <div class="container">
+            <div class="row">
+                <h1>CONTACT</h1>
+                <div class="col-sm-6 col-md-4 col">
+                    <a class="btn" href="img/wechat.png" onclick="showPic(this); return false;">
+                        <span>WECHAT</span>
+                    </a>
+                    <a class="btn" href="img/qq.jpg" onclick="showPic(this); return false;">
+                        <span>QQ</span>
+                    </a><br>
+                    <div class="qrcode">
+                        <img id="placeholder" src="" alt="" style="height:200px;width:200px">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function(){ 
+            $(".scroll").click(function(event){
+                event.preventDefault();
+                $("html,body").animate({scrollTop:$(this.hash).offset().top}, 500);
+                $('.navbar a').removeClass('selected');
+                $(this).addClass('selected');
+            });
+        });
+
+        function showPic(whichpic) {
+            var source = whichpic.getAttribute("href");
+            var placeholder = document.getElementById("placeholder");
+            placeholder.setAttribute("src",source);
+        }
+    </script>
+	</body>
+</html>

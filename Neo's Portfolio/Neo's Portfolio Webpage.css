@@ -1,0 +1,194 @@
+/*GENERAL STYLES*/
+body {
+	margin: 0;
+	font-family: Arial,'微软雅黑',sans-serif;
+	line-height: 1.5em;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.content {
+	min-height: 100vh;
+}
+
+.content h1 {
+	padding-left: 20px;
+	color: #333;
+}
+.container {
+	margin: 0 auto;
+	width: 80%;
+}
+
+.col {
+	float: left;
+	margin: 25px;
+	border: 1px solid #888;
+}
+
+.row::before,
+.row::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+@media only screen and (min-width: 769px) {
+	.col-md-1 {
+		width: calc(8.33% - 50px);
+	}
+	
+	.col-md-2 {
+		width: calc(16.66% - 50px);
+	}
+	
+	.col-md-3 {
+		width: calc(25% - 50px);
+	}
+	
+	.col-md-4 {
+		width: calc(33.33% - 50px);
+	}
+	
+	.col-md-6 {
+		width: calc(50% - 50px);
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.col-sm-1 {
+		width: calc(8.33% - 50px);
+	}
+	
+	.col-sm-2 {
+		width: calc(16.66% - 50px);
+	}
+	
+	.col-sm-3 {
+		width: calc(25% - 50px);
+	}
+	
+	.col-sm-4 {
+		width: calc(33.33% - 50px);
+	}
+	
+	.col-sm-6 {
+		width: calc(50% - 50px);
+	}
+
+	.col-sm-8 {
+		width: calc(66.6% - 50px);
+	}
+
+	.col-sm-12 {
+		width: calc(100% - 50px);
+	}
+}
+
+/*NAVIGATION*/
+nav {
+	width: 100%;
+	position: fixed;
+	top: 0;
+	background-color: #fff;
+	z-index: 999;
+}
+
+a {
+	padding-right: 12px;
+	font-size: 16px;
+	color: #000;
+	text-decoration: none;	
+}
+
+a:hover {
+	color: #e64b36;
+}
+
+.nav-header {
+	font-size: 48px;
+	font-weight: bold;
+}
+
+li {
+	list-style: none;
+}
+
+nav li {
+	display: inline;
+}
+
+nav ul {
+	padding: 0;
+}
+
+nav .container {
+	margin: 0 auto;
+	padding-top: 20px;
+	padding-left: 20px;
+}
+
+/*HOME*/
+#home {
+	padding-top: 110px;
+	text-align: center;
+	background: url(img/bg-img-1.jpg) no-repeat center center fixed;
+	background-size: cover;
+	/*
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: center;
+	*/
+}
+
+#home .container {
+	line-height: 520px;
+}
+
+/*PORTFOLIO*/
+#portfolio {
+	padding-top: 110px;
+}
+
+#portfolio .container {
+	padding-bottom: 20px;
+}
+
+.thumbnail {
+	cursor: pointer;
+}
+
+.thumbnail img {
+	width: 100%;
+	height: 13vw;
+}
+
+.thumbnail:hover {
+	opacity: 0.7;
+	transition: all 0.2s ease-in;
+}
+
+/*CONTACT*/
+#contact {
+  	background: url(img/bg-img.jpg) no-repeat bottom center fixed;
+  	background-size: ;
+	padding-top: 0px;
+	min-height: 70vh;
+}
+
+#contact .col {
+	border: none;
+}
+
+.btn {
+	color: #fff;
+}
+
+.qrcode {
+	padding-top: 20px;
+}
+
+
